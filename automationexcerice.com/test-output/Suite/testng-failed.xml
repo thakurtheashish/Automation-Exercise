@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.automationexcercise.listeners.CustomListener"/>
+    <listener class-name="com.automationexcercise.listeners.TransformerForRetry"/>
+    <listener class-name="com.automationexcercise.listeners.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.automationexercise.PageTests.SignupLoginPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="validateLogoutFunctionality"/>
+        </methods>
+      </class> <!-- com.automationexercise.PageTests.SignupLoginPageTest -->
+      <class name="com.automationexercise.PageTests.ContactUsPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="closeBrowser"/>
+          <include name="validateContactUsFunctionality"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.automationexercise.PageTests.ContactUsPageTest -->
+      <class name="com.automationexercise.PageTests.AccountCreatedPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="validateAccountCreationFunctionality"/>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.automationexercise.PageTests.AccountCreatedPageTest -->
+      <class name="com.automationexercise.PageTests.CheckoutPageTest">
+        <methods>
+          <include name="setUpLogger"/>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="validateRemoveItemFromCheckout"/>
+        </methods>
+      </class> <!-- com.automationexercise.PageTests.CheckoutPageTest -->
+      <class name="com.automationexercise.PageTests.AutomationExercisePageTest">
+        <methods>
+          <include name="validateAddToCartFunctionality"/>
+          <include name="setUpLogger"/>
+          <include name="closeBrowser"/>
+          <include name="validatePlaceOrderFunctionality"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.automationexercise.PageTests.AutomationExercisePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
